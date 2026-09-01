@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.bridge.connection.feature.protocolversion.model.FlipperSupportedState
 import com.flipperdevices.core.markdown.ClickableUrlText
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.shared.InfoElementCard
@@ -86,7 +86,7 @@ private fun ComposableFirmwareUpdateUnsupported(
             modifier = Modifier.padding(top = 8.dp, start = 12.dp, end = 12.dp),
             text = stringResource(descriptionId),
             style = LocalTypography.current.bodyM14,
-            color = LocalPallet.current.text40,
+            color = LocalPalletV2.current.text.body.secondary,
             textAlign = TextAlign.Center
         )
 
@@ -94,7 +94,7 @@ private fun ComposableFirmwareUpdateUnsupported(
             modifier = Modifier.padding(top = 18.dp, bottom = 12.dp),
             markdownResId = linkId,
             style = LocalTypography.current.bodyM14.copy(
-                color = LocalPallet.current.text60
+                color = LocalPalletV2.current.text.body.secondary
             )
         )
     }

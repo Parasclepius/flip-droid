@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.flipperdevices.bridge.connection.feature.protocolversion.model.FlipperSupportedState
 import com.flipperdevices.core.ui.ktx.clickableRipple
 import com.flipperdevices.core.ui.ktx.elements.animatedDots
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.impl.compose.elements.ComposableInfoCardContent
@@ -53,7 +53,7 @@ fun ComposableInfoCard(
                     modifier = Modifier
                         .padding(end = 12.dp)
                         .size(14.dp),
-                    tint = LocalPallet.current.iconTint30,
+                    tint = LocalPalletV2.current.icon.neutral.secondary.default,
                     painter = painterResource(DesignSystem.drawable.ic_navigate),
                     contentDescription = stringResource(R.string.info_device_info_more_information)
                 )
@@ -85,12 +85,12 @@ fun ComposableWaitingFlipper(
     ) {
         CircularProgressIndicator(
             modifier = Modifier.size(24.dp),
-            color = LocalPallet.current.accentSecond,
+            color = LocalPalletV2.current.action.blue.text.default,
             strokeWidth = 3.dp
         )
         Text(
             text = stringResource(id = R.string.info_firmware_waiting) + animatedDots(),
-            color = LocalPallet.current.text30,
+            color = LocalPalletV2.current.text.body.secondary,
             style = LocalTypography.current.bodyR14,
             textAlign = TextAlign.Center
         )

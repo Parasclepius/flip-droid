@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.flipperdevices.bridge.connection.feature.protocolversion.model.FlipperSupportedState
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.impl.model.DeviceStatus
 import com.flipperdevices.info.shared.ButtonElementRow
@@ -48,9 +48,9 @@ private fun ComposableSynchronize(
     modifier: Modifier = Modifier
 ) {
     val color = if (enabled) {
-        LocalPallet.current.accentSecond
+        LocalPalletV2.current.action.blue.text.default
     } else {
-        LocalPallet.current.text16
+        LocalPalletV2.current.action.blue.text.disabled
     }
 
     ButtonElementRow(
@@ -73,9 +73,9 @@ private fun ComposableAlarmElement(
     modifier: Modifier = Modifier
 ) {
     val colorId = if (enabled) {
-        LocalPallet.current.accentSecond
+        LocalPalletV2.current.action.blue.text.default
     } else {
-        LocalPallet.current.text16
+        LocalPalletV2.current.action.blue.text.disabled
     }
 
     ButtonElementRow(

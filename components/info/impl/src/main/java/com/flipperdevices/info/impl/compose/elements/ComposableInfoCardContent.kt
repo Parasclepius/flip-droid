@@ -14,7 +14,7 @@ import com.flipperdevices.bridge.connection.feature.storageinfo.model.flashSdSta
 import com.flipperdevices.bridge.connection.feature.storageinfo.model.isExtStorageEnding
 import com.flipperdevices.bridge.connection.feature.storageinfo.model.toString
 import com.flipperdevices.core.ui.theme.FlipperThemeInternal
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.impl.compose.info.ComposableFirmwareBuildDate
 import com.flipperdevices.info.impl.compose.info.ComposableFirmwareVersion
@@ -70,7 +70,7 @@ private fun ComposableInfoCardContentInternal(
         R.string.info_device_info_ext_flash,
         firmwareVersionInProgress || storageInfo.externalStorageRequestInProgress,
         storageInfo.flashSdStats?.toString(LocalContext.current),
-        color = if (storageInfo.isExtStorageEnding()) LocalPallet.current.warningColor else null
+        color = if (storageInfo.isExtStorageEnding()) LocalPalletV2.current.text.semantic.danger else null
     )
 }
 

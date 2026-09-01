@@ -2,7 +2,7 @@ package com.flipperdevices.info.impl.compose.elements
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.shared.ButtonElementRow
 import com.flipperdevices.info.shared.InfoElementCard
@@ -17,7 +17,7 @@ fun ComposableOptionsCard(
         ButtonElementRow(
             titleId = R.string.info_device_options,
             iconId = R.drawable.ic_options,
-            color = LocalPallet.current.text80,
+            color = LocalPalletV2.current.text.body.primary,
             onClick = onOpenOptions,
             actionIconId = DesignSystem.drawable.ic_navigate
         )

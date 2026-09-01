@@ -18,7 +18,7 @@ import com.arkivanov.decompose.ComponentContext
 import com.flipperdevices.bridge.connection.feature.protocolversion.model.FlipperSupportedState
 import com.flipperdevices.core.preference.pb.HardwareColor
 import com.flipperdevices.core.ui.ktx.elements.SwipeRefresh
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.deeplink.model.Deeplink
 import com.flipperdevices.info.impl.compose.bar.ComposableDeviceBar
 import com.flipperdevices.info.impl.compose.elements.ComposableConnectedDeviceActionCard
@@ -60,9 +60,9 @@ fun ComposableDeviceInfoScreen(
     SwipeRefresh(
         modifier = modifier
             .fillMaxSize()
-            .background(LocalPallet.current.accent)
+            .background(LocalPalletV2.current.surface.navBar.body.accentBrand)
             .statusBarsPadding()
-            .background(LocalPallet.current.background),
+            .background(LocalPalletV2.current.surface.backgroundMain.body),
         onRefresh = { refreshRequested = true }
     ) {
         Column(
