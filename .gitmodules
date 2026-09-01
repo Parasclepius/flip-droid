@@ -9,4 +9,4 @@
 [submodule "components/analytics/metric/impl/src/main/proto"]
 	path = components/analytics/metric/impl/src/main/proto
 	url = https://github.com/flipperdevices/flipperzero-protobuf-metric.git
-	branch = c7294ff66e4a475016672613de951f6bdba1cfa4
+	branch = 9f45a065dce77c14d6f39743f7c5ffc9ab5d4f2d

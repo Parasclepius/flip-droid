@@ -3,7 +3,7 @@ name: Pull Request CI
 on:
   pull_request:
     branches:
-      - 'dev'
+      - 'main'
   merge_group:
 
 # Concurrency strategy:
@@ -24,9 +24,6 @@ jobs:
   validate_gradle_wrapper:
     name: "Validate gradle wrapper"
     uses: ./.github/workflows/call-validate-gradle-wrapper.yml
-  check_changelog_changed:
-    name: "Validate CHANGELOG changed"
-    uses: ./.github/workflows/call-check-changelog.yml
   update_gradle_cache:
     name: "Gradle configuration change check"
     needs: [ validate_gradle_wrapper ]

@@ -1,10 +1,11 @@
 name: Build and publish Release
 
+# Disabled for this fork: needs SIGNING_KEY/KEY_ALIAS/KEY_STORE_PASSWORD/KEY_ALIAS_PASSWORD,
+# SENTRY_AUTH_TOKEN, COUNTLY_URL_PROD/COUNTLY_APP_KEY_PROD secrets this fork doesn't have, and
+# publishes under upstream's package id (com.flipperdevices.app). Kept as a template for when
+# this fork has its own signing/release infra. Trigger manually via workflow_dispatch until then.
 on:
-  push:
-    branches:
-      - 'master'
-      - 'rc'
+  workflow_dispatch:
 
 jobs:
   validate_gradle_wrapper:
