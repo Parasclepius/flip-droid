@@ -21,7 +21,7 @@ import com.flipperdevices.bridge.dao.api.model.FlipperKey
 import com.flipperdevices.bridge.dao.api.model.FlipperKeyPath
 import com.flipperdevices.bridge.synchronization.api.SynchronizationState
 import com.flipperdevices.bridge.synchronization.api.SynchronizationUiApi
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.core.ui.res.R as DesignSystem
 
@@ -79,7 +79,7 @@ fun ComposableFavoriteKeysTitle(
                 .padding(horizontal = 6.dp)
                 .size(size = 20.dp),
             painter = painterResource(DesignSystem.drawable.ic_star_enabled),
-            tint = LocalPallet.current.keyFavorite,
+            tint = LocalPalletV2.current.icon.warning.primary,
             contentDescription = null
         )
     }

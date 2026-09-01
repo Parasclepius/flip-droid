@@ -39,7 +39,7 @@ import com.flipperdevices.bridge.synchronization.api.SynchronizationState
 import com.flipperdevices.bridge.synchronization.api.SynchronizationUiApi
 import com.flipperdevices.core.ui.ktx.OrangeAppBarWithIcon
 import com.flipperdevices.core.ui.ktx.elements.SwipeRefresh
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import kotlinx.collections.immutable.ImmutableList
 import com.flipperdevices.core.ui.res.R as DesignSystem
@@ -189,7 +189,7 @@ private fun ColumnScope.ComposableNoKeys() {
         Text(
             text = stringResource(R.string.archive_content_empty),
             style = LocalTypography.current.bodyR16,
-            color = LocalPallet.current.text40
+            color = LocalPalletV2.current.text.body.secondary
         )
     }
 }
@@ -214,14 +214,14 @@ private fun ColumnScope.ComposableProgress() {
         Icon(
             modifier = Modifier.rotate(angle),
             painter = painterResource(DesignSystem.drawable.ic_progress),
-            tint = LocalPallet.current.accentSecond,
+            tint = LocalPalletV2.current.action.blue.text.default,
             contentDescription = stringResource(R.string.archive_sync_progress)
         )
         Text(
             modifier = Modifier.padding(top = 8.dp),
             text = stringResource(R.string.archive_sync_progress),
             style = LocalTypography.current.bodyR16,
-            color = LocalPallet.current.text40
+            color = LocalPalletV2.current.text.body.secondary
         )
     }
 }
