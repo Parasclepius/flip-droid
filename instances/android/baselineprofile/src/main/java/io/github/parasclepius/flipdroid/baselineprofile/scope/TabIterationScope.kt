@@ -1,10 +1,10 @@
-package com.flipperdevices.app.baselineprofile.scope
+package io.github.parasclepius.flipdroid.baselineprofile.scope
 
 import androidx.benchmark.macro.MacrobenchmarkScope
 import androidx.test.uiautomator.By
-import com.flipperdevices.app.baselineprofile.util.UiAutomatorExt.MEDIUM_TIMEOUT
-import com.flipperdevices.app.baselineprofile.util.UiAutomatorExt.requirePackageName
-import com.flipperdevices.app.baselineprofile.util.UiAutomatorExt.waitForObjectOrNull
+import io.github.parasclepius.flipdroid.baselineprofile.util.UiAutomatorExt.MEDIUM_TIMEOUT
+import io.github.parasclepius.flipdroid.baselineprofile.util.UiAutomatorExt.requirePackageName
+import io.github.parasclepius.flipdroid.baselineprofile.util.UiAutomatorExt.waitForObjectOrNull
 import com.flipperdevices.core.log.LogTagProvider
 import com.flipperdevices.core.log.info
 

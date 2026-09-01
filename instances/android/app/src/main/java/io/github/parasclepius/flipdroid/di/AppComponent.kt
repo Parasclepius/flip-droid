@@ -1,4 +1,4 @@
-package com.flipperdevices.app.di
+package io.github.parasclepius.flipdroid.di
 
 import android.app.Application
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.flipperdevices.app.di
+package io.github.parasclepius.flipdroid.di
 
 import com.flipperdevices.bridge.connection.service.api.FConnectionService
 import com.flipperdevices.bridge.synchronization.api.SynchronizationApi

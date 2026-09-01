@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FlipperApp"
+rootProject.name = "FlipDroid"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 

@@ -1,11 +1,11 @@
-package com.flipperdevices.app.baselineprofile.util
+package io.github.parasclepius.flipdroid.baselineprofile.util
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.BySelector
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
-import com.flipperdevices.app.baselineprofile.BuildConfig
+import io.github.parasclepius.flipdroid.baselineprofile.BuildConfig
 import org.junit.Assert
 
 object UiAutomatorExt {

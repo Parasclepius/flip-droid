@@ -4,7 +4,7 @@ import com.flipperdevices.buildlogic.model.FlavorType
 import org.gradle.api.Project
 
 object ApkConfig {
-    const val APPLICATION_ID = "com.flipperdevices.app"
+    const val APPLICATION_ID = "io.github.parasclepius.flipdroid"
 
     const val MIN_SDK_VERSION = 26
 

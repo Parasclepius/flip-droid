@@ -1,4 +1,4 @@
-# Flipper Android — custom fork
+# Flip-Droid
 
 Fork of the official Flipper Zero Android app, imported at release **1.8.1.1878** (tag `upstream-1.8.1.1878`).
 Goal is a rebuilt UI/UX, not a rewrite: the BLE/RPC layer is upstream's and stays close to upstream so
@@ -36,17 +36,26 @@ Requirements: **JDK 17 or 21** (not 25 — AGP 8.11 rejects it), Android SDK pla
 (`gradle.properties` asks for an 8 GB heap). Gradle 8.14.2 comes from the wrapper.
 
 ```
-git clone --recurse-submodules <repo> && cd flipper-android
+git clone --recurse-submodules <repo> && cd flip-droid
 echo "sdk.dir=$HOME/Android/Sdk" > local.properties
 ./gradlew :instances:android:app:assembleDebug
 ```
 
-Useful flags for a fork — these switch modules to their `noop` variants:
+These gradle properties switch modules to their `noop` variants:
 
 - `-Pis_google_feature=false` — drops Firebase/Wear GMS.
 - `-Pis_metric_enabled=false` — drops Sentry + Countly analytics.
 
 `instances/android/app/google-services.json` is still upstream's Firebase project. Replace or remove it.
+
+## Naming
+
+The app is **Flip-Droid**; applicationId and the app module's namespace are `io.github.parasclepius.flipdroid`
+(the `io.github.<user>` form is the F-Droid convention for projects without their own domain).
+
+**Internal Kotlin packages stay `com.flipperdevices.*` on purpose.** Renaming ~270 modules would churn 3000+ files
+and make every future upstream merge a conflict. Only the app identity layer was renamed: applicationId, app module
+namespace + its 3 sources, the baseline-profile package, `rootProject.name`, and the `app_name` strings.
 
 ## Conventions
 

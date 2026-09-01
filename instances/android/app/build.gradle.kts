@@ -7,11 +7,16 @@ import com.flipperdevices.buildlogic.SourceInstall
 plugins {
     id("flipper.android-app")
     id("flipper.anvil.entrypoint")
-    alias(libs.plugins.google.gms)
     alias(libs.plugins.baselineprofile)
 }
 
-android.namespace = "com.flipperdevices.app"
+// Firebase is opt-in for this fork. Enabling it requires supplying your own
+// google-services.json registered against ApkConfig.APPLICATION_ID.
+if (IS_GOOGLE_FEATURE_AVAILABLE) {
+    apply(plugin = libs.plugins.google.gms.get().pluginId)
+}
+
+android.namespace = "io.github.parasclepius.flipdroid"
 
 dependencies {
     implementation(projects.components.core.di)

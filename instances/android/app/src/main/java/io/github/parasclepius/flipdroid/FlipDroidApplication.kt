@@ -1,4 +1,4 @@
-package com.flipperdevices.app
+package io.github.parasclepius.flipdroid
 
 import android.app.Application
 import coil3.ImageLoader
@@ -6,8 +6,8 @@ import coil3.PlatformContext
 import coil3.SingletonImageLoader
 import coil3.request.crossfade
 import coil3.svg.SvgDecoder
-import com.flipperdevices.app.di.DaggerMergedAppComponent
-import com.flipperdevices.app.di.MainComponent
+import io.github.parasclepius.flipdroid.di.DaggerMergedAppComponent
+import io.github.parasclepius.flipdroid.di.MainComponent
 import com.flipperdevices.core.activityholder.CurrentActivityHolder
 import com.flipperdevices.core.di.ApplicationParams
 import com.flipperdevices.core.di.ComponentHolder
@@ -21,8 +21,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import timber.log.Timber
 
-class FlipperApplication : Application(), SingletonImageLoader.Factory, LogTagProvider {
-    override val TAG = "FlipperApplication"
+class FlipDroidApplication : Application(), SingletonImageLoader.Factory, LogTagProvider {
+    override val TAG = "FlipDroidApplication"
 
     private val applicationScope = CoroutineScope(SupervisorJob() + FlipperDispatchers.workStealingDispatcher)
     override fun onCreate() {

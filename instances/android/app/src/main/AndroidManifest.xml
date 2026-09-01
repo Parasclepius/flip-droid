@@ -8,7 +8,7 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher"
             android:label="@string/app_name"
-            android:name="com.flipperdevices.app.FlipperApplication"
+            android:name="io.github.parasclepius.flipdroid.FlipDroidApplication"
             android:supportsRtl="false"
             android:theme="@style/FlipperTheme">
         <activity
