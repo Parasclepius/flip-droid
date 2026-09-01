@@ -54,7 +54,7 @@ Useful flags for a fork — these switch modules to their `noop` variants:
   Dagger + Anvil (`@ContributesBinding`, `@ContributesAssistedFactory`) for DI, Ktor for network, Room for storage.
 - Dependencies go through `gradle/libs.versions.toml`. Never hardcode a version in a build script.
 - New module? `settings.gradle.kts` must list it, and the app module must depend on it or Anvil won't see it.
-- Protobuf definitions are a submodule (`components/bridge/pbutils/src/main/proto`, pinned to tag `0.16`).
+- Protobuf definitions are a submodule (`components/bridge/pbutils/src/main/proto`, pinned to tag `0.25`).
   Do not edit them; they mirror firmware.
 
 ## Working agreements
