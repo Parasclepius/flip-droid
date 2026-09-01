@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.shared.ComposableDeviceInfoRow
 import com.flipperdevices.info.shared.ComposableDeviceInfoRowWithText
@@ -82,7 +82,7 @@ private fun ComposableFirmwareVersionAndBuildDatePreview() {
     Column(
         Modifier
             .width(300.dp)
-            .background(LocalPallet.current.background)
+            .background(LocalPalletV2.current.surface.backgroundMain.body)
     ) {
         ComposableFirmwareVersion(firmwareVersion, true)
         ComposableFirmwareBuildDate(firmwareVersion, true)

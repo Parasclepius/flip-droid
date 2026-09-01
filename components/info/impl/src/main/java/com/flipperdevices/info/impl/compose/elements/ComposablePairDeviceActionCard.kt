@@ -6,7 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.impl.compose.dialogs.ComposableForgotDialog
 import com.flipperdevices.info.impl.model.DeviceStatus
@@ -57,7 +57,7 @@ fun ComposablePairDeviceActionCard(
         ButtonElementRow(
             titleId = R.string.info_device_forget,
             iconId = R.drawable.ic_disconnection,
-            color = LocalPallet.current.forgetFlipper,
+            color = LocalPalletV2.current.action.danger.text.default,
             onClick = { isForgotDialogOpen = true }
         )
         if (isForgotDialogOpen) {
@@ -79,7 +79,7 @@ private fun ComposableDisconnectElement(
         modifier = modifier,
         titleId = R.string.info_device_disconnect,
         iconId = DesignSystem.drawable.ic_bluetooth_disable,
-        color = LocalPallet.current.accentSecond,
+        color = LocalPalletV2.current.action.blue.text.default,
         onClick = onDisconnect
     )
 }
@@ -93,7 +93,7 @@ private fun ComposableConnectElement(
         modifier = modifier,
         titleId = R.string.info_device_connect,
         iconId = DesignSystem.drawable.ic_bluetooth,
-        color = LocalPallet.current.accentSecond,
+        color = LocalPalletV2.current.action.blue.text.default,
         onClick = onConnectAndSynchronize
     )
 }
@@ -107,7 +107,7 @@ private fun ComposableFirstConnectElement(
         modifier = modifier,
         titleId = R.string.info_device_connect,
         iconId = DesignSystem.drawable.ic_bluetooth,
-        color = LocalPallet.current.accentSecond,
+        color = LocalPalletV2.current.action.blue.text.default,
         onClick = onGoToConnectScreen
     )
 }

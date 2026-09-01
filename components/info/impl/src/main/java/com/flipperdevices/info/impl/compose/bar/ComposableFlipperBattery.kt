@@ -18,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.info.impl.R
 
 private const val EMPTY_BATTERY = 0f
@@ -25,6 +26,11 @@ private const val FIRST_BATTERY_THRESHOLD = 0.15f
 private const val SECOND_BATTERY_THRESHOLD = 0.4f
 private const val FULL_BATTERY = 1.0f
 
+// batteryBackground/batteryCharging stay on LocalPallet: they're theme-invariant grays drawn
+// against the battery icon's own hardcoded white fill (see Color.White below), not the app
+// background. FlipperPalletV2 has no theme-invariant token for this exact gray - every
+// candidate (icon.neutral tiers, etc.) is theme-adaptive and would shift the icon's look
+// between light/dark, which the current design deliberately avoids.
 @Composable
 fun ComposableFlipperBattery(
     @FloatRange(from = 0.0, to = 1.0, fromInclusive = false) percent: Float,
@@ -60,10 +66,10 @@ private fun BatteryContent(
     modifier: Modifier = Modifier
 ) {
     val batteryColor = when (percent) {
-        in EMPTY_BATTERY..FIRST_BATTERY_THRESHOLD -> LocalPallet.current.batteryRed
-        in FIRST_BATTERY_THRESHOLD..SECOND_BATTERY_THRESHOLD -> LocalPallet.current.batteryYellow
-        in SECOND_BATTERY_THRESHOLD..FULL_BATTERY -> LocalPallet.current.batteryGreen
-        else -> LocalPallet.current.batteryRed
+        in EMPTY_BATTERY..FIRST_BATTERY_THRESHOLD -> LocalPalletV2.current.illustration.danger.primary
+        in FIRST_BATTERY_THRESHOLD..SECOND_BATTERY_THRESHOLD -> LocalPalletV2.current.illustration.warning.primary
+        in SECOND_BATTERY_THRESHOLD..FULL_BATTERY -> LocalPalletV2.current.illustration.success.primary
+        else -> LocalPalletV2.current.illustration.danger.primary
     }
 
     Row(

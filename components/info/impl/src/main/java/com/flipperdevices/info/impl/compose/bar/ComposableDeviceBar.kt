@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.preference.pb.HardwareColor
 import com.flipperdevices.core.ui.flippermockup.ComposableFlipperMockup
 import com.flipperdevices.core.ui.flippermockup.ComposableFlipperMockupImage
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.info.impl.R
 import com.flipperdevices.info.impl.model.DeviceStatus
@@ -41,7 +41,7 @@ private fun DeviceBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(LocalPallet.current.accent),
+            .background(LocalPalletV2.current.surface.navBar.body.accentBrand),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -91,7 +91,7 @@ private fun NoDeviceText() {
     Text(
         text = stringResource(R.string.info_device_no_device),
         style = LocalTypography.current.buttonB16,
-        color = LocalPallet.current.onAppBar
+        color = LocalPalletV2.current.text.body.blackOnColor
     )
 }
 
@@ -119,7 +119,7 @@ private fun ConnectedText(deviceStatus: DeviceStatus.Connected) {
                     modifier = Modifier.padding(start = 5.dp),
                     text = "${(batteryValue * FLOAT_TO_PERCENT_QUALIFIER).roundToInt()}%",
                     style = LocalTypography.current.subtitleR12,
-                    color = LocalPallet.current.onAppBar
+                    color = LocalPalletV2.current.text.body.blackOnColor
                 )
             }
         }
@@ -132,12 +132,12 @@ private fun ColumnScope.FlipperName(title: String) {
         modifier = Modifier.padding(bottom = 3.dp),
         text = title,
         style = LocalTypography.current.buttonB16,
-        color = LocalPallet.current.onAppBar
+        color = LocalPalletV2.current.text.body.blackOnColor
     )
     Text(
         text = stringResource(R.string.info_device_model_name),
         style = LocalTypography.current.subtitleR12,
-        color = LocalPallet.current.onAppBar
+        color = LocalPalletV2.current.text.body.blackOnColor
     )
 }
 
