@@ -15,7 +15,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.bottombar.model.TabState
 import com.flipperdevices.core.ui.ktx.tab.TabTransition
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 
 @Composable
@@ -60,7 +59,7 @@ fun ComposeMaterialYouTab(
                             .background(LocalPalletV2.current.action.blackAndWhite.border.whiteOnColor)
                             .padding(1.dp)
                             .clip(CircleShape)
-                            .background(LocalPallet.current.updateProgressGreen)
+                            .background(LocalPalletV2.current.action.fwUpdate.background.primary.default)
                     )
                 }
             }

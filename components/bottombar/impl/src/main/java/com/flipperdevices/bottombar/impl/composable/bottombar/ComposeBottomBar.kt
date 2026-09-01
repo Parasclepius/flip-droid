@@ -19,7 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.flipperdevices.bottombar.impl.model.BottomBarTabEnum
 import com.flipperdevices.bottombar.model.TabState
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 
 @Composable
 fun ComposeBottomBar(
@@ -61,7 +61,7 @@ private fun ComposeBottomBarInternal(
     }
     Box(
         modifier = modifier
-            .background(LocalPallet.current.bottomBarBackground)
+            .background(LocalPalletV2.current.surface.bottomBar.body)
             .navigationBarsPadding()
     ) {
         TabRow(
@@ -69,7 +69,7 @@ private fun ComposeBottomBarInternal(
                 .fillMaxWidth(),
             backgroundColor = Color.Transparent,
             selectedTabIndex = selectedIndex,
-            contentColor = LocalPallet.current.bottomBarContent,
+            contentColor = LocalPalletV2.current.text.body.primary,
             indicator = { },
             // remove bottom divider from tabRow
             divider = { }
