@@ -33,7 +33,6 @@ import com.flipperdevices.core.ktx.jre.roundPercentToString
 import com.flipperdevices.core.ktx.jre.toFormattedSize
 import com.flipperdevices.core.ui.ktx.clickableRipple
 import com.flipperdevices.core.ui.theme.FlipperThemeInternal
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 
@@ -122,7 +121,7 @@ fun ArchiveProgressScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(LocalPallet.current.background)
+            .background(LocalPalletV2.current.surface.backgroundMain.body)
             .statusBarsPadding(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -133,7 +132,7 @@ fun ArchiveProgressScreen(
                 R.string.archive_syncing,
             ),
             style = LocalTypography.current.titleB18,
-            color = LocalPallet.current.text60,
+            color = LocalPalletV2.current.text.body.secondary,
             textAlign = TextAlign.Center
         )
 
@@ -164,7 +163,7 @@ fun ArchiveProgressScreen(
                 .clickableRipple(onClick = onCancel),
             text = stringResource(R.string.archive_sync_cancel),
             style = LocalTypography.current.bodyM14,
-            color = LocalPallet.current.accentSecond
+            color = LocalPalletV2.current.action.blue.text.default
         )
     }
 }

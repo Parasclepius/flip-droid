@@ -23,7 +23,7 @@ import com.flipperdevices.bridge.dao.api.model.FlipperKey
 import com.flipperdevices.bridge.dao.api.model.FlipperKeyPath
 import com.flipperdevices.bridge.synchronization.api.SynchronizationState
 import com.flipperdevices.bridge.synchronization.api.SynchronizationUiApi
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.keyparser.api.model.FlipperKeyParsed
 import kotlinx.collections.immutable.ImmutableList
@@ -110,7 +110,7 @@ private fun CategoryEmpty(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(top = 12.dp, start = 98.dp, end = 98.dp),
             text = stringResource(R.string.search_not_found_description),
             style = LocalTypography.current.bodyR16,
-            color = LocalPallet.current.text40,
+            color = LocalPalletV2.current.text.body.secondary,
             textAlign = TextAlign.Center
         )
     }

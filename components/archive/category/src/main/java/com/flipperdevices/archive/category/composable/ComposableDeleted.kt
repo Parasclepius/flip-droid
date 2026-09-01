@@ -24,7 +24,7 @@ import com.flipperdevices.bridge.dao.api.model.FlipperKeyPath
 import com.flipperdevices.bridge.synchronization.api.SynchronizationState
 import com.flipperdevices.core.ui.ktx.OrangeAppBar
 import com.flipperdevices.core.ui.ktx.clickableRipple
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.res.R as DesignSystem
 
 @Composable
@@ -109,7 +109,7 @@ private fun ComposableDeletedAppBarInternal(
             modifier = Modifier.clickableRipple(bounded = false) { showMenu = true },
             painter = painterResource(DesignSystem.drawable.ic_more_points),
             contentDescription = null,
-            tint = LocalPallet.current.onAppBar
+            tint = LocalPalletV2.current.text.body.blackOnColor
         )
         DropdownMenu(
             expanded = showMenu,

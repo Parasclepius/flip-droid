@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.flipperdevices.archive.impl.model.CategoryItem
 import com.flipperdevices.archive.model.CategoryType
 import com.flipperdevices.core.ui.ktx.clickableRipple
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.core.ui.res.R as DesignSystem
 
@@ -48,7 +48,7 @@ fun ComposableCategoryItem(
             Icon(
                 painter = painterResource(DesignSystem.drawable.ic_forward),
                 contentDescription = null,
-                tint = LocalPallet.current.iconTint30
+                tint = LocalPalletV2.current.icon.neutral.secondary.default
             )
         }
     }
@@ -75,7 +75,7 @@ private fun ComposableCategoryCounter(counter: Int?) {
     if (counter == null) {
         CircularProgressIndicator(
             modifier = Modifier.size(size = 18.dp),
-            color = LocalPallet.current.progressBarGray
+            color = LocalPalletV2.current.icon.neutral.secondary.default
         )
         return
     }
@@ -85,7 +85,7 @@ private fun ComposableCategoryCounter(counter: Int?) {
             modifier = Modifier.padding(horizontal = 2.dp),
             text = counter.toString(),
             style = LocalTypography.current.bodyM14,
-            color = LocalPallet.current.text30
+            color = LocalPalletV2.current.text.body.secondary
         )
     }
 }

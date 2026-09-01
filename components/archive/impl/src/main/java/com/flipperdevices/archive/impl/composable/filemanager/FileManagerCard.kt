@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import com.flipperdevices.archive.impl.R
 import com.flipperdevices.core.ui.ktx.clickableRipple
 import com.flipperdevices.core.ui.theme.FlipperThemeInternal
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.core.ui.res.R as DesignSystem
@@ -69,7 +68,7 @@ fun FileManagerCard(
                 Icon(
                     painter = painterResource(DesignSystem.drawable.ic_forward),
                     contentDescription = null,
-                    tint = LocalPallet.current.iconTint30
+                    tint = LocalPalletV2.current.icon.neutral.secondary.default
                 )
             }
             Text(

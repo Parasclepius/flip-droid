@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.archive.impl.model.CategoryItem
 import com.flipperdevices.archive.model.CategoryType
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable
@@ -42,7 +42,7 @@ private fun ComposableCategoryList(
         Divider(
             modifier = Modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = LocalPallet.current.divider12
+            color = LocalPalletV2.current.surface.contentCard.separator.default
         )
 
         ComposableCategoryItem(categoryItem = deletedCategory, onOpenCategory = onOpenCategory)

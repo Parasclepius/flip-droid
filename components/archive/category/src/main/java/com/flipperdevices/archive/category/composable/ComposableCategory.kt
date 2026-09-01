@@ -25,6 +25,7 @@ import com.flipperdevices.bridge.synchronization.api.SynchronizationState
 import com.flipperdevices.bridge.synchronization.api.SynchronizationUiApi
 import com.flipperdevices.core.ui.ktx.OrangeAppBar
 import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.keyparser.api.model.FlipperKeyParsed
 import kotlinx.collections.immutable.ImmutableList
@@ -112,6 +113,9 @@ private fun CategoryList(
                 flipperKeyParsed = flipperKeyParsed,
                 typeColor = when (categoryType) {
                     is CategoryType.ByFileType -> colorByFlipperKeyType(categoryType.fileType)
+                    // Stays on LocalPallet: keyDeleted is a fixed light gray in both themes.
+                    // Every FlipperPalletV2 neutral-gray token is theme-adaptive and would flip
+                    // to near-black in dark mode instead, inverting this swatch's look.
                     CategoryType.Deleted -> LocalPallet.current.keyDeleted
                 },
                 onCardClick = {
@@ -134,7 +138,7 @@ private fun CategoryEmpty(modifier: Modifier = Modifier) {
     Box(modifier, contentAlignment = Alignment.Center) {
         Text(
             text = stringResource(R.string.category_empty),
-            color = LocalPallet.current.text40,
+            color = LocalPalletV2.current.text.body.secondary,
             style = LocalTypography.current.bodyR16
         )
     }

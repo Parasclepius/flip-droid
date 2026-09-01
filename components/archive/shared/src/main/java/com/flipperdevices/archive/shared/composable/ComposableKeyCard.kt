@@ -19,7 +19,7 @@ import com.flipperdevices.archive.shared.utils.ExtractKeyMetaInformation
 import com.flipperdevices.bridge.dao.api.model.FlipperKeyType.Companion.colorByFlipperKeyType
 import com.flipperdevices.core.ui.ktx.clickableRipple
 import com.flipperdevices.core.ui.ktx.elements.ComposableKeyType
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.keyparser.api.model.FlipperKeyParsed
 
@@ -59,7 +59,7 @@ private fun ColumnScope.ComposableKeyCardContent(
             Text(
                 modifier = Modifier.padding(horizontal = 14.dp),
                 text = protocol,
-                color = LocalPallet.current.text12,
+                color = LocalPalletV2.current.text.body.tertiary,
                 style = LocalTypography.current.subtitleR12
             )
         }
@@ -97,7 +97,7 @@ private fun ColumnScope.ComposableKeyCardContent(
             ),
             text = notes,
             style = LocalTypography.current.bodyR14,
-            color = LocalPallet.current.text30,
+            color = LocalPalletV2.current.text.body.secondary,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
