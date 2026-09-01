@@ -59,5 +59,5 @@ Useful flags for a fork — these switch modules to their `noop` variants:
 
 ## Working agreements
 
-- `main` tracks the pristine upstream import. Fork work happens on feature branches.
+- Tag `upstream-1.8.1.1878` is the untouched import. `main` is that plus build fixes; fork work goes on branches.
 - Prefer migrating touched screens onto `FlipperPalletV2` rather than extending legacy `LocalPallet`.
