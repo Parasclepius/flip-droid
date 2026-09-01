@@ -21,7 +21,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.ktx.clickableRipple
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.toolstab.impl.R
@@ -57,12 +56,12 @@ private fun MifareClassicTitle() = Row(
             .size(24.dp),
         painter = painterResource(DesignSystem.drawable.ic_fileformat_nfc),
         contentDescription = stringResource(R.string.nfcattack_mifare_classic_title),
-        tint = LocalPallet.current.text100
+        tint = LocalPalletV2.current.icon.blackAndWhite.default
     )
     Text(
         text = stringResource(R.string.nfcattack_mifare_classic_title),
         style = LocalTypography.current.buttonB16,
-        color = LocalPallet.current.text100
+        color = LocalPalletV2.current.text.body.primary
     )
 }
 
@@ -95,12 +94,12 @@ private fun MifareClassicMfKey32(
         Text(
             text = stringResource(R.string.nfcattack_mifare_classic_mfkey32_title),
             style = LocalTypography.current.bodyM14,
-            color = LocalPallet.current.text100
+            color = LocalPalletV2.current.text.body.primary
         )
         Text(
             text = stringResource(R.string.nfcattack_mifare_classic_mfkey32_desc),
             style = LocalTypography.current.subtitleR12,
-            color = LocalPallet.current.text30
+            color = LocalPalletV2.current.text.body.secondary
         )
     }
 
@@ -120,6 +119,6 @@ private fun MifareClassicMfKey32(
         modifier = Modifier.padding(start = 8.dp, end = 8.dp),
         painter = painterResource(id = DesignSystem.drawable.ic_navigate),
         contentDescription = stringResource(R.string.nfcattack_mifare_classic_mfkey32_title),
-        tint = LocalPallet.current.iconTint30
+        tint = LocalPalletV2.current.icon.neutral.secondary.default
     )
 }

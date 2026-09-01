@@ -21,7 +21,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.ktx.clickableRipple
 import com.flipperdevices.core.ui.theme.FlipperThemeInternal
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import com.flipperdevices.toolstab.impl.R
@@ -60,7 +59,7 @@ private fun RemoteControlsTitle() = Row(
     Text(
         text = stringResource(R.string.remotes_library_infrared_title),
         style = LocalTypography.current.buttonB16,
-        color = LocalPallet.current.text100
+        color = LocalPalletV2.current.text.body.primary
     )
 }
 
@@ -92,12 +91,12 @@ private fun RemoteControls(
         Text(
             text = stringResource(R.string.remotes_library_title),
             style = LocalTypography.current.bodyM14,
-            color = LocalPallet.current.text100
+            color = LocalPalletV2.current.text.body.primary
         )
         Text(
             text = stringResource(R.string.remotes_library_desc),
             style = LocalTypography.current.subtitleR12,
-            color = LocalPallet.current.text30
+            color = LocalPalletV2.current.text.body.secondary
         )
     }
 
@@ -119,7 +118,7 @@ private fun RemoteControls(
         modifier = Modifier.padding(start = 8.dp, end = 8.dp),
         painter = painterResource(id = DesignSystem.drawable.ic_navigate),
         contentDescription = stringResource(R.string.remotes_library_title),
-        tint = LocalPallet.current.iconTint30
+        tint = LocalPalletV2.current.icon.neutral.secondary.default
     )
 }
 
