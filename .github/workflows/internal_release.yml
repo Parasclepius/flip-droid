@@ -1,3 +1,7 @@
+# Disabled for this fork: needs SIGNING_KEY/KEY_ALIAS/KEY_STORE_PASSWORD/KEY_ALIAS_PASSWORD,
+# SENTRY_AUTH_TOKEN secrets and a GOOGLE_PLAY_PUBLISHER_JSON this fork doesn't have, and publishes
+# under upstream's package id (com.flipperdevices.app) to upstream's Play Store listing. Kept as
+# a template for when this fork has its own signing/release/Play Store infra.
 name: Upload to Google Play Beta
 
 on: workflow_dispatch
