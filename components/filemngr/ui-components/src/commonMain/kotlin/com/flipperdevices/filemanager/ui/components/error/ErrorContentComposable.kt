@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.ktx.clickableRipple
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import flipperapp.components.filemngr.ui_components.generated.resources.Res
 import flipperapp.components.filemngr.ui_components.generated.resources.filemngr_error_retry
@@ -57,7 +57,7 @@ fun ErrorContentComposable(
             text = desc,
             textAlign = TextAlign.Center,
             style = LocalTypography.current.bodyR14.copy(
-                color = LocalPallet.current.text30
+                color = LocalPalletV2.current.text.body.secondary
             )
         )
         if (onRetry != null) {
@@ -68,7 +68,7 @@ fun ErrorContentComposable(
                 text = stringResource(Res.string.filemngr_error_retry),
                 textAlign = TextAlign.Center,
                 style = LocalTypography.current.buttonM16.copy(
-                    color = LocalPallet.current.accentSecond
+                    color = LocalPalletV2.current.action.blue.text.default
                 )
             )
         }

@@ -18,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.ktx.elements.FlipperProgressIndicator
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 
@@ -53,7 +52,7 @@ internal fun FileTransferProgressComposable(
         FlipperProgressIndicator(
             modifier = Modifier.padding(horizontal = 32.dp),
             accentColor = LocalPalletV2.current.action.blue.border.primary.default,
-            secondColor = LocalPallet.current.actionOnFlipperProgress,
+            secondColor = LocalPalletV2.current.icon.blackAndWhite.whiteOnColor,
             painter = null,
             percent = animatedProgress
         )
