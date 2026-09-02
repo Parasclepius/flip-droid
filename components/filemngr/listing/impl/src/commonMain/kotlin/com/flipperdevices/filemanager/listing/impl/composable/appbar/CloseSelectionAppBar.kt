@@ -17,7 +17,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.flipperdevices.core.ui.ktx.OrangeAppBar
 import com.flipperdevices.core.ui.ktx.clickableRipple
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 import flipperapp.components.core.ui.res.generated.resources.Res
 import flipperapp.components.core.ui.res.generated.resources.material_ic_close
@@ -44,7 +44,7 @@ fun CloseSelectionAppBar(
                     .clickableRipple(onClick = onClose),
                 painter = painterResource(Res.drawable.material_ic_close),
                 contentDescription = null,
-                tint = LocalPallet.current.onAppBar
+                tint = LocalPalletV2.current.text.body.blackOnColor
             )
         },
         endBlock = {
@@ -66,7 +66,7 @@ fun CloseSelectionAppBar(
                         .clickableRipple(onClick = onSelectAll),
                     text = stringResource(FML.string.fml_selection_select_all),
                     style = LocalTypography.current.bodyM14,
-                    color = LocalPallet.current.onAppBar,
+                    color = LocalPalletV2.current.text.body.blackOnColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -76,7 +76,7 @@ fun CloseSelectionAppBar(
                         .clickableRipple(onClick = onDeselectAll),
                     text = stringResource(FML.string.fml_selection_deselect_all),
                     style = LocalTypography.current.bodyM14,
-                    color = LocalPallet.current.onAppBar,
+                    color = LocalPalletV2.current.text.body.blackOnColor,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )

@@ -21,7 +21,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.flipperdevices.core.ui.ktx.elements.ComposableFlipperButton
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import flipperapp.components.core.ui.res.generated.resources.Res
 import flipperapp.components.core.ui.res.generated.resources.material_ic_close
@@ -49,7 +48,7 @@ fun NameDialog(
             Column(
                 modifier = Modifier
                     .clip(RoundedCornerShape(18.dp))
-                    .background(LocalPallet.current.backgroundDialog)
+                    .background(LocalPalletV2.current.surface.dialog.body.default)
                     .padding(17.dp)
             ) {
                 Row(

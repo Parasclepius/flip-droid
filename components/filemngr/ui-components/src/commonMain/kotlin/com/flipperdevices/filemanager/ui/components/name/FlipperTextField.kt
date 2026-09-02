@@ -34,7 +34,6 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import com.flipperdevices.core.ui.theme.LocalPallet
 import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.core.ui.theme.LocalTypography
 
@@ -156,14 +155,14 @@ private fun FlipperTextBox(
             }
         },
         textStyle = textStyle.copy(
-            color = LocalPallet.current.text100
+            color = LocalPalletV2.current.text.body.primary
         ),
         keyboardOptions = keyboardOptions,
         keyboardActions = KeyboardActions(onDone = {
             focusManager.clearFocus()
         }),
         enabled = enabled,
-        cursorBrush = SolidColor(LocalPallet.current.text100)
+        cursorBrush = SolidColor(LocalPalletV2.current.text.body.primary)
     )
 }
 
@@ -177,8 +176,8 @@ private fun FlipperTextBoxUnderline(
     val underlineColorAnimated by animateColorAsState(
         targetValue = when {
             isError -> LocalPalletV2.current.text.semantic.danger
-            isFocused -> LocalPallet.current.accentSecond
-            else -> LocalPallet.current.text30
+            isFocused -> LocalPalletV2.current.action.blue.text.default
+            else -> LocalPalletV2.current.text.body.secondary
         },
         animationSpec = tween(durationMillis = ANIMATION_DURATION_MS)
     )

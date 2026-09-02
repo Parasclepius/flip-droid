@@ -6,7 +6,7 @@ import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.filemanager.editor.viewmodel.EditorViewModel
 
 @Composable
@@ -23,7 +23,7 @@ fun LoadedContent(
             readOnly = !state.canEdit,
             onValueChange = onTextChange,
             colors = TextFieldDefaults.textFieldColors(
-                cursorColor = LocalPallet.current.text100
+                cursorColor = LocalPalletV2.current.text.body.primary
             )
         )
     }

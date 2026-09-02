@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.flipperdevices.core.ui.ktx.OrangeAppBar
-import com.flipperdevices.core.ui.theme.LocalPallet
+import com.flipperdevices.core.ui.theme.LocalPalletV2
 import com.flipperdevices.filemanager.editor.model.EditorEncodingEnum
 import okio.Path
 
@@ -28,7 +28,7 @@ internal fun EditorAppBar(
         modifier = modifier,
         endBlock = {
             Row(
-                modifier = Modifier.background(LocalPallet.current.accent),
+                modifier = Modifier.background(LocalPalletV2.current.surface.navBar.body.accentBrand),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 AnimatedVisibility(
